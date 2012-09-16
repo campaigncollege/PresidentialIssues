@@ -1,0 +1,14 @@
+{
+  "name": "issues",
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.0-9",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "subdomain": "issue",
+  "dependencies": {
+    "express": "*"
+  }
+}

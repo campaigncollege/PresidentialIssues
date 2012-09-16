@@ -1,0 +1,95 @@
+body {
+  background-color: #f0f0f0;
+  font-family: "Helvetica", serif;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+a :hover {
+  color: #45ada8;
+  text-decoration: underline;
+}
+#intro {
+  width: 1000px;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 100px;
+  color: #a9a9a9;
+}
+#introbox {
+  width: 100%;
+}
+#prez {
+  color: #45ada8;
+}
+#about {
+  width: 900px;
+  font-size: 30px;
+  margin: 0px auto;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  color: #909090;
+}
+#about a {
+  color: #45ada8;
+  text-decoration: none;
+}
+circle {
+  color: #fafafa;
+  opacity: .9;
+}
+#hoverbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  color: #a9a9a9;
+  font-size: 30px;
+}
+#hoverbox span {
+  font-size: 50px;
+}
+/*
+circle.node {
+  stroke: rgba(172,172,172,172);
+  stroke-width: 1.5px;
+}
+*/
+line.link {
+  stroke: #a9a9a9;
+  stroke-opacity: .3;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+#chart {
+  width: 1000px;
+  height: 660px;
+  margin: 10px auto;
+  color: #f0f0f0;
+  background-color: #dcdcdc;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  position: relative;
+  padding-left: 0px;
+}
+#linkbox {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 100%;
+}
+#linkbox ul {
+  list-style-type: none;
+  padding: 15px;
+}
+#linkbox li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #a9a9a9;
+}

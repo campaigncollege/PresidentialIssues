@@ -1,0 +1,15 @@
+{
+  "name": "issues-crawler",
+  "subdomain": "issues-crawler",
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.0-10",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "express": "*",
+    "htmlparser": "*"
+  }
+}
