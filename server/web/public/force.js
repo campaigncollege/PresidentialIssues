@@ -3,11 +3,9 @@ var width = 1000,
 
 var links = {};
 
-var color = d3.scale.category20();
-
 var force = d3.layout.force()
-    .charge(-500)
-    .linkDistance(200)
+    .charge(-600)
+    .linkDistance(250)
     .linkStrength(.2)
     .size([width, height]);
 
@@ -29,13 +27,29 @@ d3.json("links.json", function(json) {
       .data(json.links)
     .enter().append("line")
       .attr("class", "link")
-      .style("stroke-width", function(d) { return d.value/2; });
+      .style("stroke-width", function(d) { 
+        
+        var val = d.value/2.0;
+
+        if(val > 10){
+          val = 10;
+        }else if(val < 1){
+          val = 1;
+        }
+
+        return val; 
+
+      });
 
   var node = svg.selectAll("circle.node")
       .data(json.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", function(d) { return d.num/1.1; })
+      .attr("r", function(d) { 
+
+        return d.num * 50.0 + 10;
+
+      })
       .style("fill", function(d) { return "45ADA8"; })
       .on("mouseover", function(d, i) { 
 

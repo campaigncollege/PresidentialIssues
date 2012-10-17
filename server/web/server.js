@@ -41,10 +41,29 @@ var makeData = function(page){
 	var jsonArr = Object.keys(json);
 	var arr = [];
 
+	var min = 0;
+	var max = json[jsonArr[0]];
+
 	for(var i=0; i<jsonArr.length; i++){
-		var curr = {"name": jsonArr[i], "num": json[jsonArr[i]] };
+		var num = json[jsonArr[i]];
+		var curr = {"name": jsonArr[i], "num": num };
+		if(num < min){
+			min = num;
+		}
+		if(num > max){
+			max = num;
+		}
 		arr.push(curr);
-		issueNumbers [jsonArr[i]] = i;
+		issueNumbers[jsonArr[i]] = i;
+
+	}
+
+	//normalize data
+
+	for(var i=0; i<jsonArr.length; i++){
+		var curr = jsonArr[i];
+		var currNum = json[jsonArr[i]];
+		arr[issueNumbers[jsonArr[i]]].num = (1.0* currNum - min) / (1.0 * max - min);
 
 	}
 
@@ -52,7 +71,7 @@ var makeData = function(page){
 
 	getEdges();
 
-	//console.log(data);
+	console.log(data);
 }
 
 var makeLinks = function(page){
@@ -111,7 +130,7 @@ var makeEdges = function(page){
 		
 	}
 
-	console.log(links);
+	//console.log(links);
 
 	data["links"] = links;
 
